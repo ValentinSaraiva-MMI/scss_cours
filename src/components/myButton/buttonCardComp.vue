@@ -2,6 +2,8 @@
     <button class="button_card">Add To Casrt</button>
 </template>
 
+ 
+
 <style lang="scss" scoped>
 
 .button_card{
@@ -18,5 +20,7 @@
 </style>
 
 <script>
+
+ 
 
 </script>
