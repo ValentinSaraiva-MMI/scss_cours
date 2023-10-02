@@ -23,6 +23,8 @@
 
     <template v-slot:footer>
       <p>footer</p>
+
+      <MyButton href="/about">My link Button</MyButton>
     </template>
   </DefaultLayout>
 
