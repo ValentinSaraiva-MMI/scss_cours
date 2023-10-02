@@ -17,6 +17,8 @@
       </nav>
     </template>
 
+    <MyIcon />
+
     <template v-slot:aside>
       <p>aside</p>
     </template>
@@ -43,6 +45,7 @@
 import buttonRect from '@/components/myButton/buttonRectComp.vue'
 import DefaultLayout from '../components/myButton/layout/DefaultLayout.vue'
 import mybackgroundscrollView from '../components/myButton/mybackgroundView.vue'
+import MyIcon from '../components/elements/MyIcon.vue'
 
 /*
 
