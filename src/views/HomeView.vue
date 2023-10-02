@@ -1,5 +1,5 @@
 <template>
-  <h1>hello oopoooo</h1>
+  <h1>hello oodddpoooo</h1>
 
   <buttonRect size="small" variant="rounded" href="/about"> test btn </buttonRect>
   <DefaultLayout>
@@ -17,7 +17,9 @@
       </nav>
     </template>
 
-    <MyIcon />
+    <MyIcon name="documentation" />
+    <MyIcon name="facebook" />
+    <MyIcon name="play" />
 
     <template v-slot:aside>
       <p>aside</p>
@@ -44,7 +46,7 @@
 <script setup>
 import buttonRect from '@/components/myButton/buttonRectComp.vue'
 import DefaultLayout from '../components/myButton/layout/DefaultLayout.vue'
-import mybackgroundscrollView from '../components/myButton/mybackgroundView.vue'
+
 import MyIcon from '../components/elements/MyIcon.vue'
 
 /*
