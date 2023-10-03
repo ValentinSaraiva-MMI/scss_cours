@@ -35,10 +35,8 @@ export const Card = {
   },
   args: {
     imagesrc: 'http://placekitten.com/g/200/300',
-
     title: 'titre',
     Description: 'description',
-
     imagealt: 'alt img'
   }
 }

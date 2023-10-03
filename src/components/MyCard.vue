@@ -4,12 +4,23 @@
       <img :src="imagesrc" :alt="imagealt" />
     </div>
 
+    <div>
+      <MyButton href="https://www.youtube.com/watch" size="small" variant="default"
+        >monbouton</MyButton
+      >
+
+      content: String, href: String, size: String, variant: String
+    </div>
     <div class="card__title">
       <h2>{{ title }}</h2>
     </div>
-    <div class="card__description">
+    <div class="card__prix">
       <p>
-        {{ Description }}
+        {{ prix }}
+      </p>
+
+      <p>
+        {{ note }}
       </p>
     </div>
   </div>
@@ -21,11 +32,11 @@
   height: 200px;
   border-radius: rem(20);
   border: red 2px solid;
-  background-color: black;
 
   &__image {
-    width: 100px;
-    height: 100px;
+    width: 60%;
+    height: 60%;
+    border-radius: 35%;
   }
 
   &__countent {
@@ -35,10 +46,13 @@
 </style>
 
 <script setup>
+import MyButton from './elements/MyButton.vue'
+
 const props = defineProps({
   imagealt: String,
   title: String,
-  Description: String,
-  imagesrc: String
+  prix: String,
+  imagesrc: String,
+  note: String
 })
 </script>
