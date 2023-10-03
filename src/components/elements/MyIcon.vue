@@ -1,5 +1,5 @@
 <template>
-  <i class="icon">
+  <i class="icon" :class="className">
     <component :is="getIcon" />
   </i>
 </template>
@@ -9,11 +9,47 @@
   display: inline-flex;
   align-items: center;
   border-radius: 100%;
+  color: $black;
   background: $white;
-  box-shadow: 0 0 5px red;
-  height: rem(50);
-  width: rem(50);
+  height: rem(42);
+  width: rem(42);
+
   justify-content: center;
+
+  &.-big {
+    height: rem(88);
+    width: rem(88);
+    background: $secondary-color;
+    color: $primary-color;
+    svg {
+      scale: 1.5;
+    }
+  }
+
+  &.-primary {
+    background: $primary-color;
+    color: $white;
+  }
+
+  &.-secondary {
+    background: $secondary-color;
+    color: $primary-color;
+  }
+
+  &.-dark {
+    background: $black;
+    color: $white;
+  }
+
+  &.-white {
+    background: $white;
+    color: $black;
+    box-shadow: 0px 0px 5px $gray;
+  }
+
+  &.-reverse {
+    transform: rotate(180deg);
+  }
 }
 </style>
 
@@ -33,7 +69,7 @@ import IconLinkedin from '../icons/IconLinkedin.vue'
 import IconInstagram from '../icons/IconInstagram.vue'
 import IconPlay from '../icons/IconPlay.vue'
 import IconFleche from '../icons/IconFleche.vue'
-import IconChevron from '../icons/IconChvron.vue'
+import IconChevron from '../icons/IconChevron.vue'
 import IconBag from '../icons/IconBag.vue'
 import IconSearch from '../icons/IconSearch.vue'
 import IconClock from '../icons/IconClock.vue'
@@ -42,7 +78,10 @@ import IconPhone from '../icons/IconPhone.vue'
 import IconStar from '../icons/IconStar.vue'
 
 const props = defineProps({
-  name: String
+  name: String,
+  size: String,
+  color: String,
+  direction: String
 })
 
 const getIcon = computed(() => {
@@ -87,6 +126,17 @@ const getIcon = computed(() => {
       return IconPhone
     case 'star':
       return IconStar
+    default:
+      return IconFacebook
   }
 })
+
+const className = computed(() => ({
+  ' -big': props.size === 'big',
+  '-primary': props.color === 'primary',
+  '-secondary': props.color === 'secondary',
+  '-dark': props.color === 'dark',
+  '-white': props.color === 'white',
+  '-reverse': props.direction === 'reverse'
+}))
 </script>

@@ -16,6 +16,7 @@ const className = computed(() => ({
   ' -small': props.size === 'small'
 }))
 </script>
+
 <template>
   <a v-if="href" :href="href" class="button" :class="className"><slot></slot></a>
   <button v-else class="button" :class="className"><slot></slot></button>

@@ -5,6 +5,7 @@
   <DefaultLayout>
     <template v-slot:header>
       <h2>helloworld</h2>
+      <MyCard imagesrc="http://placekitten.com/g/200/300" />
 
       <nav>
         <ul>
@@ -19,7 +20,7 @@
 
     <MyIcon name="documentation" />
     <MyIcon name="facebook" />
-    <MyIcon name="play" />
+    <MyIcon name="play" size="big" />
 
     <template v-slot:aside>
       <p>aside</p>
@@ -48,6 +49,7 @@ import buttonRect from '@/components/myButton/buttonRectComp.vue'
 import DefaultLayout from '../components/myButton/layout/DefaultLayout.vue'
 
 import MyIcon from '../components/elements/MyIcon.vue'
+import MyCard from '../components/MyCard.vue'
 
 /*
 

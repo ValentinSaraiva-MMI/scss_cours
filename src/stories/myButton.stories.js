@@ -1,120 +1,97 @@
 import MyButton from '@/components/elements/MyButton.vue'
 
 export default {
-    title: 'Elements/MyButton',
-    component: MyButton,
-    argTypes:  {
-        href : {
-                control:'text',
+  title: 'Elements/MyButton',
+  component: MyButton,
+  argTypes: {
+    href: {
+      control: 'text'
+    },
 
-        },
+    size: {
+      control: 'select',
+      options: ['default', 'small']
+    },
 
-          size : {
-                control:'select',
-                options :['default', 'small'],
-
-        },
-
-        variant : {
-                control:'select',
-                options : ['default', 'rounded'],
-
-        },
-
-
+    variant: {
+      control: 'select',
+      options: ['default', 'rounded']
     }
-    
+  }
 }
 
 export const PrimaryButton = {
-render: (args) => {
+  render: (args) => {
     return {
-        components: {
-            MyButton,
-        },
-        setup() {
-return {args} 
-        },
-        template: `<MyButton v-bind="args">My link Button</MyButton>`
+      components: {
+        MyButton
+      },
+      setup() {
+        return { args }
+      },
+      template: `<MyButton v-bind="args">My link Button</MyButton>`
     }
+  },
 
-},
-
-args: {
-    size :"regular",
-    variant:"default"
+  args: {
+    size: 'regular',
+    variant: 'default'
+  }
 }
-
-}
-
 
 export const SecoundaryButton = {
-render: (args) => {
+  render: (args) => {
     return {
-        components: {
-            MyButton,
-        },
-        setup() {
-return {args} 
-        },
-        template: `<MyButton v-bind="args">My link Button</MyButton>`
+      components: {
+        MyButton
+      },
+      setup() {
+        return { args }
+      },
+      template: `<MyButton v-bind="args">My link Button</MyButton>`
     }
+  },
 
-},
-
-args: {
-    size :"regular",
-    variant:"rounded"
+  args: {
+    size: 'regular',
+    variant: 'rounded'
+  }
 }
-
-}
-
-
-
-
-
-
 
 export const SmallSecoundaryButton = {
-render: (args) => {
+  render: (args) => {
     return {
-        components: {
-            MyButton,
-        },
-        setup() {
-return {args} 
-        },
-        template: `<MyButton v-bind="args">My link Button</MyButton>`
+      components: {
+        MyButton
+      },
+      setup() {
+        return { args }
+      },
+      template: `<MyButton v-bind="args">My link Button</MyButton>`
     }
+  },
 
-},
-
-args: {
-    size :"small",
-    variant:"rounded"
+  args: {
+    size: 'small',
+    variant: 'rounded'
+  }
 }
-
-}
-
-
 
 export const SmallPrimaryButton = {
-render: (args) => {
+  render: (args) => {
     return {
-        components: {
-            MyButton,
-        },
-        setup() {
-return {args} 
-        },
-        template: `<MyButton v-bind="args">My link Button</MyButton>`
+      components: {
+        MyButton
+      },
+      setup() {
+        return { args }
+      },
+      template: `<MyButton v-bind="args">My link Button</MyButton>`
     }
+  },
 
-},
-
-args: {
-    size :"small",
-    variant:"default"
-}
-
+  args: {
+    size: 'small',
+    variant: 'rounded'
+  }
 }
