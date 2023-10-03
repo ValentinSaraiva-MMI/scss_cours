@@ -35,11 +35,11 @@
     font-weight: 600;
   }
   &.-p1 {
-    font-size: $medium-font-size;
+    font-size: $regular-font-size;
     font-weight: 500;
   }
   &.-p2 {
-    font-size: $regular-font-size;
+    font-size: $small-font-size;
     font-weight: 400;
   }
 }

@@ -5,29 +5,33 @@
     </div>
 
     <div class="card__column">
-      <div class="card__title">
-        <MyTitle h4="h4" variant="h4">
-          {{ title }}
-        </MyTitle>
+      <div class="card__col1">
+        <div class="card__title">
+          <MyTitle h4="h4" variant="h4">
+            {{ title }}
+          </MyTitle>
+        </div>
+
+        <div class="card__button">
+          <MyButton size="small" variant="rounded">
+            {{ button__title }}
+          </MyButton>
+        </div>
       </div>
 
-      <div class="card__note">
-        <IconStar />
-        <MyTitle h5="h5" variant="p2">
-          {{ note }}
-        </MyTitle>
-      </div>
+      <div class="card__col2">
+        <div class="card__note">
+          <IconStarFill />
+          <MyTitle h5="h5" variant="p2">
+            {{ note }}
+          </MyTitle>
+        </div>
 
-      <div class="card__button">
-        <MyButton size="small" variant="default">
-          {{ button__title }}
-        </MyButton>
-      </div>
-
-      <div class="card__prix">
-        <MyTitle h5="h5" variant="p1">
-          {{ prix }}
-        </MyTitle>
+        <div class="card__prix">
+          <MyTitle h5="h5" variant="p1">
+            {{ prix }}
+          </MyTitle>
+        </div>
       </div>
     </div>
   </div>
@@ -75,9 +79,20 @@
 
   &__column {
     margin-top: 16px;
-    gap: 15px;
+    gap: 16px;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  &__note {
+    gap: 10px;
+  }
+
+  &__col1 {
+    justify-content: start;
+  }
+  &__col2 {
+    justify-content: end;
   }
 }
 </style>
@@ -85,7 +100,7 @@
 <script setup>
 import MyButton from './elements/MyButton.vue'
 import MyTitle from './elements/MyTitle.vue'
-import IconStar from './icons/IconStar.vue'
+import IconStarFill from './icons/IconStarFill.vue'
 
 const props = defineProps({
   imagealt: String,
