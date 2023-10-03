@@ -10,7 +10,7 @@ export default {
 
     variant: {
       control: 'select',
-      options: ['h1', 'h2', 'h3', 'h4', 'h5']
+      options: ['h1', 'h2', 'h3', 'h4', 'h5', 'p1', 'p2']
     }
   }
 }

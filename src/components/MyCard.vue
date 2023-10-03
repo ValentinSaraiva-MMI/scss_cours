@@ -6,16 +6,16 @@
 
     <div class="card__column">
       <div class="card__title">
-        <!-- <h2>{{ title }}</h2> -->
-        <MyTitle variant="h3">
+        <MyTitle h4="h4" variant="h4">
           {{ title }}
         </MyTitle>
       </div>
 
       <div class="card__note">
-        <p>
+        <IconStar />
+        <MyTitle h5="h5" variant="p2">
           {{ note }}
-        </p>
+        </MyTitle>
       </div>
 
       <div class="card__button">
@@ -25,9 +25,9 @@
       </div>
 
       <div class="card__prix">
-        <p>
+        <MyTitle h5="h5" variant="p1">
           {{ prix }}
-        </p>
+        </MyTitle>
       </div>
     </div>
   </div>
@@ -85,6 +85,7 @@
 <script setup>
 import MyButton from './elements/MyButton.vue'
 import MyTitle from './elements/MyTitle.vue'
+import IconStar from './icons/IconStar.vue'
 
 const props = defineProps({
   imagealt: String,
