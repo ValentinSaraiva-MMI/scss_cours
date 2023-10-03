@@ -17,6 +17,10 @@ export default {
 
     Description: {
       control: 'text'
+    },
+
+    button__title: {
+      control: 'text'
     }
   }
 }
@@ -34,9 +38,12 @@ export const Card = {
     }
   },
   args: {
-    imagesrc: 'http://placekitten.com/g/200/300',
+    imagesrc: 'http://placekitten.com/g/485/333',
     title: 'titre',
     Description: 'description',
-    imagealt: 'alt img'
+    imagealt: 'alt img',
+    button__title: 'Add To Cart',
+    prix: '$15.00',
+    note: '4.9'
   }
 }

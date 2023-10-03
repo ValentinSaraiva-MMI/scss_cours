@@ -4,55 +4,94 @@
       <img :src="imagesrc" :alt="imagealt" />
     </div>
 
-    <div>
-      <MyButton href="https://www.youtube.com/watch" size="small" variant="default"
-        >monbouton</MyButton
-      >
+    <div class="card__column">
+      <div class="card__title">
+        <!-- <h2>{{ title }}</h2> -->
+        <MyTitle variant="h3">
+          {{ title }}
+        </MyTitle>
+      </div>
 
-      content: String, href: String, size: String, variant: String
-    </div>
-    <div class="card__title">
-      <h2>{{ title }}</h2>
-    </div>
-    <div class="card__prix">
-      <p>
-        {{ prix }}
-      </p>
+      <div class="card__note">
+        <p>
+          {{ note }}
+        </p>
+      </div>
 
-      <p>
-        {{ note }}
-      </p>
+      <div class="card__button">
+        <MyButton size="small" variant="default">
+          {{ button__title }}
+        </MyButton>
+      </div>
+
+      <div class="card__prix">
+        <p>
+          {{ prix }}
+        </p>
+      </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .card {
-  width: rem(200);
-  height: 200px;
-  border-radius: rem(20);
-  border: red 2px solid;
+  overflow: hidden;
+  width: 485px;
+  height: 485px;
+  border-radius: 35px;
+  border: 1px solid #000;
 
   &__image {
-    width: 60%;
-    height: 60%;
-    border-radius: 35%;
+    border-radius: 35px 35px 0px 0px;
+    width: 485px;
+    height: 333px;
+    flex-shrink: 0;
   }
 
   &__countent {
     margin-bottom: rem(20);
+  }
+
+  &__button,
+  &__note,
+  &__prix,
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: $primary-font-familly;
+    font-size: $medium-font-size;
+    font-weight: 700;
+  }
+
+  &__prix {
+    font-family: $primary-font-familly;
+    font-size: $medium-font-size;
+    font-weight: 500;
+  }
+
+  &__column {
+    margin-top: 16px;
+    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 </style>
 
 <script setup>
 import MyButton from './elements/MyButton.vue'
+import MyTitle from './elements/MyTitle.vue'
 
 const props = defineProps({
   imagealt: String,
   title: String,
   prix: String,
   imagesrc: String,
-  note: String
+  note: String,
+  button__title: String
 })
 </script>
