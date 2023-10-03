@@ -2,7 +2,9 @@
   <div class="card">
     <div class="card__column">
       <div class="card__icone">
-        <MyIcon name="play" size="big" />
+        <!--  <MyIcon name="play" size="big" /> -->
+
+        <MyIcon :name="iconName" :color="iconColor" :size="iconSize" />
       </div>
 
       <div class="card__title">
@@ -51,7 +53,8 @@ import MyIcon from '../components/elements/MyIcon.vue'
 const props = defineProps({
   title: String,
   description: String,
-
-  color: String
+  iconName: String,
+  iconSize: String,
+  iconColor: String
 })
 </script>

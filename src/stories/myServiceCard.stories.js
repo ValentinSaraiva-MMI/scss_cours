@@ -8,12 +8,25 @@ export default {
       control: 'text'
     },
 
-    Description: {
+    description: {
       control: 'text'
     },
 
     button__title: {
       control: 'text'
+    },
+
+    iconName: {
+      control: 'select',
+      options: ['default', 'fleche']
+    },
+    iconSize: {
+      control: 'select',
+      options: ['default', 'big']
+    },
+    iconColor: {
+      control: 'select',
+      options: ['default', 'primary']
     }
   }
 }
@@ -33,6 +46,10 @@ export const Card = {
   args: {
     title: 'titre',
     description: 'description',
-    imagealt: 'alt img'
+    iconName: 'fleche',
+    iconColor: 'primary',
+    iconSize: 'big'
   }
 }
+
+//plutot Nirvana ou foo fighters ?
