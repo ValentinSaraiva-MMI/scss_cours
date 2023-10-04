@@ -9,26 +9,26 @@
   padding: 33px 67px;
   border: none;
   border-radius: 15px;
-  background: linear-gradient(lighten($color-main, 10%), $color-main);
-  font-family: $font;
-  font-size: $font_size-litle;
+  background: linear-gradient(lighten($primary-color, 10%), $primary-color);
+  font-family: $primary-font-familly;
+  font-size: $small-font-size;
   font-weight: 600;
-  color: $color-white;
+  color: $white;
 
   display: inline-block;
 
   &.-rounded {
     border-radius: 37px;
-    background: $color-main;
-    font-family: $font;
-    font-size: $font_size-litle;
+    background: $primary-color;
+    font-family: $primary-font-familly;
+    font-size: $small-font-size;
     font-weight: 500;
   }
 
   &.-small {
     font-weight: 400;
 
-    font-size: $font_size-litle;
+    font-size: $small-font-size;
   }
 }
 </style>

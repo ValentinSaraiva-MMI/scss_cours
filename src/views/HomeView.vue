@@ -1,10 +1,11 @@
 <template>
-  <h1>hello oopoooo</h1>
+  <h1>hello oodddpoooo</h1>
 
   <buttonRect size="small" variant="rounded" href="/about"> test btn </buttonRect>
   <DefaultLayout>
     <template v-slot:header>
       <h2>helloworld</h2>
+      <MyCard imagesrc="http://placekitten.com/g/200/300" />
 
       <nav>
         <ul>
@@ -17,12 +18,18 @@
       </nav>
     </template>
 
+    <MyIcon name="documentation" />
+    <MyIcon name="facebook" />
+    <MyIcon name="play" size="big" />
+
     <template v-slot:aside>
       <p>aside</p>
     </template>
 
     <template v-slot:footer>
       <p>footer</p>
+
+      <MyButton href="/about">My link Button</MyButton>
     </template>
   </DefaultLayout>
 
@@ -40,7 +47,9 @@
 <script setup>
 import buttonRect from '@/components/myButton/buttonRectComp.vue'
 import DefaultLayout from '../components/myButton/layout/DefaultLayout.vue'
-import mybackgroundscrollView from '../components/myButton/mybackgroundView.vue'
+
+import MyIcon from '../components/elements/MyIcon.vue'
+import MyCard from '../components/MyCard.vue'
 
 /*
 
