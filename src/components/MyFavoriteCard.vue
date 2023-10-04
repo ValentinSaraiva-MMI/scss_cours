@@ -34,6 +34,7 @@
 
 <style lang="scss" scoped>
 .card {
+  background: $white;
   width: 258px;
   height: 275px;
   border-radius: 35px;
