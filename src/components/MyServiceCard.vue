@@ -4,7 +4,7 @@
       <div class="card__icone">
         <!--  <MyIcon name="play" size="big" /> -->
 
-        <MyIcon :name="iconName" :color="iconColor" :size="iconSize" />
+        <MyIcon :direction="iconDirection" :name="iconName" :color="iconColor" :size="iconSize" />
       </div>
 
       <div class="card__title">
@@ -55,6 +55,7 @@ defineProps({
   description: String,
   iconName: String,
   iconSize: String,
-  iconColor: String
+  iconColor: String,
+  iconDirection: String
 })
 </script>
