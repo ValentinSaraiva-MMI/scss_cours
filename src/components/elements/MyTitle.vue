@@ -7,7 +7,7 @@
   <h2 v-else-if="h2" :h2="h2" class="titre" :class="className"><slot></slot></h2>
   <h5 v-else-if="h5" :h5="h5" class="titre" :class="className"><slot></slot></h5>
 
-  <p v-else class="titre" :class="className"></p>
+  <p v-else class="titre" :class="className"><slot></slot></p>
 </template>
 
 <style lang="scss" scoped>

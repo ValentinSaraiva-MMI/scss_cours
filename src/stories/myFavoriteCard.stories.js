@@ -11,8 +11,10 @@ export default {
     description: {
       control: 'text'
     },
-
-    button__title: {
+    imagesrc: {
+      control: 'text'
+    },
+    imagealt: {
       control: 'text'
     }
   }
@@ -31,11 +33,10 @@ export const Card = {
     }
   },
   args: {
-    monnaie: '$',
     prix: '9.15',
     title: 'titre',
     description: 'description',
-    imagesrc: '',
+    imagesrc: 'http://placekitten.com/g/232/190',
     imagealt: 'Carte représentant les articles favoris, présent dans le hero de la page.'
   }
 }

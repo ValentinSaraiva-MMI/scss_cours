@@ -22,13 +22,13 @@
       <div class="card__col2">
         <div class="card__note">
           <IconStarFill />
-          <MyTitle h5="h5" variant="p2">
+          <MyTitle variant="p2">
             {{ note }}
           </MyTitle>
         </div>
 
         <div class="card__prix">
-          <MyTitle h5="h5" variant="p1">
+          <MyTitle variant="p1">
             {{ prix }}
           </MyTitle>
         </div>
