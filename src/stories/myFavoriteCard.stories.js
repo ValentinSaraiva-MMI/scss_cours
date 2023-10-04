@@ -31,6 +31,7 @@ export const Card = {
     }
   },
   args: {
+    monnaie: '$',
     prix: '9.15',
     title: 'titre',
     description: 'description',
