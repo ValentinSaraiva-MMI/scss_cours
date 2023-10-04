@@ -2,8 +2,6 @@
   <div class="card">
     <div class="card__column">
       <div class="card__icone">
-        <!--  <MyIcon name="play" size="big" /> -->
-
         <img :src="imagesrc" :alt="imagealt" />
       </div>
 
@@ -17,6 +15,15 @@
         <MyTitle h5="h5" variant="p1">
           {{ description }}
         </MyTitle>
+      </div>
+
+      <div class="card__prix">
+        <span>$</span>
+        <span>
+          <MyTitle h5="h5" variant="p1">
+            {{ prix }}
+          </MyTitle>
+        </span>
       </div>
     </div>
   </div>
@@ -37,6 +44,7 @@ import MyTitle from './elements/MyTitle.vue'
 const props = defineProps({
   title: String,
   description: String,
+  prix: String,
   imagesrc: String,
   imagealt: String
 })

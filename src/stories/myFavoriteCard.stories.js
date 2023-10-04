@@ -14,19 +14,6 @@ export default {
 
     button__title: {
       control: 'text'
-    },
-
-    iconName: {
-      control: 'select',
-      options: ['default', 'fleche']
-    },
-    iconSize: {
-      control: 'select',
-      options: ['default', 'big']
-    },
-    iconColor: {
-      control: 'select',
-      options: ['default', 'primary']
     }
   }
 }
@@ -44,6 +31,7 @@ export const Card = {
     }
   },
   args: {
+    prix: '9.15',
     title: 'titre',
     description: 'description',
     imagesrc: '',
