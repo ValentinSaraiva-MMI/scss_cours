@@ -36,7 +36,7 @@ export const Card = {
     prix: '9.15',
     title: 'titre',
     description: 'description',
-    imagesrc: 'http://placekitten.com/g/232/190',
+    imagesrc: '/image/burger.png',
     imagealt: 'Carte représentant les articles favoris, présent dans le hero de la page.'
   }
 }
