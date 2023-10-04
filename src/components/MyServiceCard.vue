@@ -50,7 +50,7 @@
 import MyTitle from './elements/MyTitle.vue'
 import MyIcon from '../components/elements/MyIcon.vue'
 
-const props = defineProps({
+defineProps({
   title: String,
   description: String,
   iconName: String,

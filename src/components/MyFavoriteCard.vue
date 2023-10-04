@@ -19,11 +19,10 @@
 
       <div class="card__prix">
         <span>$</span>
-        <span>
-          <MyTitle h5="h5" variant="p1">
-            {{ prix }}
-          </MyTitle>
-        </span>
+
+        <MyTitle class="span" h5="h5" variant="p1">
+          {{ prix }}
+        </MyTitle>
       </div>
     </div>
   </div>
@@ -36,15 +35,20 @@
   border-radius: 35px;
   border: 1px solid $gray;
 }
+
+.span {
+  display: inline-block;
+}
 </style>
 
 <script setup>
 import MyTitle from './elements/MyTitle.vue'
 
-const props = defineProps({
+defineProps({
   title: String,
   description: String,
   prix: String,
+  monnaie: String,
   imagesrc: String,
   imagealt: String
 })

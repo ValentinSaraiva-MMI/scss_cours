@@ -102,7 +102,7 @@ import MyButton from './elements/MyButton.vue'
 import MyTitle from './elements/MyTitle.vue'
 import IconStarFill from './icons/IconStarFill.vue'
 
-const props = defineProps({
+defineProps({
   imagealt: String,
   title: String,
   prix: String,
