@@ -16,6 +16,11 @@ export default {
     },
     imagealt: {
       control: 'text'
+    },
+
+    monnaie: {
+      control: 'select',
+      options: ['$', '€']
     }
   }
 }
@@ -37,6 +42,7 @@ export const Card = {
     title: 'titre',
     description: 'description',
     imagesrc: '/image/burger.png',
-    imagealt: 'Carte représentant les articles favoris, présent dans le hero de la page.'
+    imagealt: 'Carte représentant les articles favoris, présent dans le hero de la page.',
+    monnaie: '$'
   }
 }

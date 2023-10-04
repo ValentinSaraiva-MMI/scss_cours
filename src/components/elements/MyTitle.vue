@@ -63,6 +63,7 @@ const className = computed(() => ({
   '-h2': props.variant === 'h2',
   '-h3': props.variant === 'h3',
   '-h4': props.variant === 'h4',
+  '-h5': props.variant === 'h5',
   '-p1': props.variant === 'p1',
   '-p2': props.variant === 'p2'
 }))

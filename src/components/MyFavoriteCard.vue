@@ -17,7 +17,10 @@
         </MyTitle>
       </div>
 
-      <MyTitle class="span" h5="h5" variant="p1"> ${{ prix }} </MyTitle>
+      <div>
+        <MyTitle class="card__span--couleur" h5="h5" variant="h5"> {{ monnaie }} </MyTitle>
+        <MyTitle class="card__span" h5="h5" variant="h5"> {{ prix }} </MyTitle>
+      </div>
     </div>
   </div>
 </template>
@@ -30,9 +33,20 @@
   margin-top: 20px;
   border: 1px solid $gray;
 
+  &__span {
+    display: inline-block;
+
+    &--couleur {
+      color: $red;
+      display: inline-block;
+    }
+  }
+
   &__image {
-    max-width: 278px;
+    max-width: 238px;
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
     top: -60px;
   }
 
@@ -42,10 +56,6 @@
     text-align: center;
     gap: 11px 0px;
   }
-}
-
-.span {
-  display: inline-block;
 }
 </style>
 
@@ -57,6 +67,7 @@ defineProps({
   description: String,
   prix: String,
   imagesrc: String,
-  imagealt: String
+  imagealt: String,
+  monnaie: String
 })
 </script>
