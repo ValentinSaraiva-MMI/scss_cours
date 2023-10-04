@@ -1,5 +1,5 @@
 <template>
-    <button class="button_round">Learn More</button>
+  <button class="button_round">Learn More</button>
 </template>
 
 <style lang="scss" scoped>

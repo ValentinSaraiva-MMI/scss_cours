@@ -28,14 +28,6 @@ export default {
     }
   },
 
-  methods: {
-    handleScroll: (e) => {
-      let scrolltop = window.scrollY
-      let scrollBottom = scrolltop + window.innerHeight
-      console.log
-    }
-  },
-
   mounted() {
     window.addEventListener('scroll', this.handleScroll)
   },

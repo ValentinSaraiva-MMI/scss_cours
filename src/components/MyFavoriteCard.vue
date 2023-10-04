@@ -44,7 +44,7 @@
 <script setup>
 import MyTitle from './elements/MyTitle.vue'
 
-const props = defineProps({
+defineProps({
   title: String,
   description: String,
   prix: String,

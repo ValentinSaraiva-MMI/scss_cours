@@ -1,5 +1,5 @@
 <template>
-    <button class="button_card">Add To Casrt</button>
+  <button class="button_card">Add To Casrt</button>
 </template>
 
  
