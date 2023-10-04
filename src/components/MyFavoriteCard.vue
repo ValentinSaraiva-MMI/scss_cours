@@ -21,8 +21,15 @@
         <MyTitle class="card__span--couleur" h5="h5" variant="h5"> {{ monnaie }} </MyTitle>
         <MyTitle class="card__span" h5="h5" variant="h5"> {{ prix }} </MyTitle>
       </div>
+
+      <div class="card__icon">
+        <MyIcon name="fleche" color="dark" />
+        <MyIcon direction="reverse" name="fleche" color="white" />
+      </div>
     </div>
   </div>
+
+  <div></div>
 </template>
 
 <style lang="scss" scoped>
@@ -40,6 +47,11 @@
       color: $red;
       display: inline-block;
     }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: space-evenly;
   }
 
   &__image {
@@ -61,6 +73,7 @@
 
 <script setup>
 import MyTitle from './elements/MyTitle.vue'
+import MyIcon from '../components/elements/MyIcon.vue'
 
 defineProps({
   title: String,
@@ -68,6 +81,9 @@ defineProps({
   prix: String,
   imagesrc: String,
   imagealt: String,
-  monnaie: String
+  monnaie: String,
+  iconName: String,
+  iconSize: String,
+  iconDirection: String
 })
 </script>

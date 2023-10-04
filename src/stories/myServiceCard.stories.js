@@ -14,8 +14,8 @@ export default {
 
     button__title: {
       control: 'text'
-    },
-
+    }
+    /*
     iconName: {
       control: 'select',
       options: ['default', 'fleche']
@@ -28,6 +28,7 @@ export default {
       control: 'select',
       options: ['default', 'primary']
     }
+*/
   }
 }
 
@@ -45,10 +46,12 @@ export const Card = {
   },
   args: {
     title: 'titre',
-    description: 'description',
+    description: 'description'
+    /*
     iconName: 'fleche',
     iconColor: 'primary',
     iconSize: 'big'
+*/
   }
 }
 
