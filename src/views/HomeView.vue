@@ -1,14 +1,26 @@
 <template>
   <buttonRect size="small" variant="rounded" href="/about"> test btn </buttonRect>
   <Mynavbar />
+
+  <!-- {{ recipesNames }}
+  {{ SpaguettiRecipes }}
+  {{ HasGoalID1 }} -->
+
+  <ul>
+    <li v-for="(item, index) in recipesNames" :key="index">
+      {{ item }}
+    </li>
+  </ul>
 </template>
 
 <script setup>
 import buttonRect from '@/components/myButton/buttonRectComp.vue'
 import Mynavbar from '@/components/elements/MyNavbar.vue'
-import { onMounted } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 
-/* console.log('avant la requete ') 
+import axios from 'axios'
+
+/* console.log('avant la requete ')
 
 fetch('http://localhost:3000/recipes', {
   method: 'GET'
@@ -23,8 +35,14 @@ console.log('apres la requete ')
 
 */
 
+const client = axios.create({
+  baseURL: import.meta.env.VITE_API_URL
+})
+
+const recipes = ref([])
+
 const getRecipesThen = () => {
-  fetch('http://localhost:3000/recipes')
+  fetch(import.meta.env.VITE_API_URL + '/recipes') //place la donné local host via une variable du fichier .env
     .then((response) => response.json())
     .then((recipes) => {
       fetch('http://localhost:3000/recipes/cuisine/1')
@@ -33,16 +51,35 @@ const getRecipesThen = () => {
     })
 }
 
-const getRecipes = async () => {
-  const response = await fetch('http://localhost:3000/recipes')
-  const cuisineRecipies = await fetch('http://localhost:3000/recipes')
+const recipesNames = computed(() => {
+  return recipes.value.map((item) => {
+    return item.recipe_name
+  })
+})
 
-  return { recipes: await response.json(), cuisineRecipies: await cuisineRecipies.json() }
+const SpaguettiRecipes = computed(() => {
+  return recipes.value.filter((item) => item.recipe_name.toLowerCase().includes('spaghetti'))
+})
+
+const HasGoalID1 = computed(() => {
+  return recipes.value.some((item) => item.goal_id === 1)
+})
+
+/*
+const getRecipes = async () => {
+  const response = await client.get('/recipes')
+  const cuisineRecipies = await client.get('/recipes/cuisine/1')
+
+  return { recipes: response, cuisineRecipies: cuisineRecipies }
+}
+*/
+
+const getRecipes = async () => {
+  const response = await client.get('recipes')
+  return response.data
 }
 
 onMounted(async () => {
-  console.log('fetch + await', await getRecipes())
-
-  getRecipesThen()
+  recipes.value = await getRecipes()
 })
 </script>
