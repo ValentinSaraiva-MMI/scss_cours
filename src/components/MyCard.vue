@@ -7,9 +7,11 @@
     <div class="card__column">
       <div class="card__col1">
         <div class="card__title">
-          <MyTitle h4="h4" variant="h4">
-            {{ title }}
-          </MyTitle>
+          <RouterLink :to="`/recipe/${id}`">
+            <MyTitle h4="h4" variant="h4">
+              {{ title }}
+            </MyTitle>
+          </RouterLink>
         </div>
 
         <div class="card__button">
@@ -108,6 +110,7 @@ defineProps({
   prix: String,
   imagesrc: String,
   note: String,
-  button__title: String
+  button__title: String,
+  id: Number
 })
 </script>

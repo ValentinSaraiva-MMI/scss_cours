@@ -1,6 +1,7 @@
 <template>
   <buttonRect size="small" variant="rounded" href="/about"> test btn </buttonRect>
   <Mynavbar />
+  <MyCards />
 
   <!-- {{ recipesNames }}
   {{ SpaguettiRecipes }}
@@ -17,8 +18,9 @@
 import buttonRect from '@/components/myButton/buttonRectComp.vue'
 import Mynavbar from '@/components/elements/MyNavbar.vue'
 import { computed, onMounted, ref } from 'vue'
+import MyCards from '@/components/MyCards.vue'
 
-import axios from 'axios'
+import { client } from '@/utils/axios'
 
 /* console.log('avant la requete ')
 
@@ -34,10 +36,6 @@ fetch('http://localhost:3000/recipes', {
 console.log('apres la requete ')
 
 */
-
-const client = axios.create({
-  baseURL: import.meta.env.VITE_API_URL
-})
 
 const recipes = ref([])
 
